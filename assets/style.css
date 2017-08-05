@@ -17,3 +17,16 @@
   display:block;
   position:absolute;
 }
+
+#randomize{
+  display:inline;
+  margin-top:150px;
+}
+
+.app{
+  display:block;
+  position:absolute;
+  border:1px dashed black;
+  height:200px;
+  width:50%;
+}
