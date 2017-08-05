@@ -2,6 +2,11 @@ var notes = ["a","as","b","c","cs","d","ds","e","f","fs","g","gs"]
 
 var indexNotesPicked= []
 var notesPicked = []
+var scaleLengths = [2,3,4]
+
+function randNum(max){
+  return Math.floor(Math.random()*max)
+}
 
 function test(max){
 
@@ -37,12 +42,9 @@ function test(max){
 
 function randNote(note){
 	// $(".note").css("background-color","white")
-  if( notesPicked.length<=3){
-    $(""+note).css("background-color","red")
-  }else{
-    $(""+note).css("background-color","pink")
 
-  }
+    $(""+note).css("background-color","red")
+
 }
 
 function clear(){
@@ -57,12 +59,14 @@ function clear(){
 $("document").ready(function(){
 
     $("#randomize").click(function(){
+      clear()
+      for(i = 0; i <=scaleLengths[randNum(3)]; i++){
       randNote(test(notes.length))
           console.log("notes selected")
           console.log(notesPicked)
 
       $(".newscale").text(notesPicked)
-
+      }
     })
     $("#clear").click(function(){
       clear()
