@@ -54,11 +54,20 @@ function randNote(note){
 	$(""+note).css("background-color","red")
 }
 
+function clear(){
+  $(".note").css("background-color","white")
+  notes = ["a","as","b","c","cs","d","ds","e","f","fs","g","gs"]
+  notesPicked= []
+}
+
 $("document").ready(function(){
 
     $("#randomize").click(function(){
       randNote(test(notes.length))
       console.log(notesPicked)
+    })
+    $("#clear").click(function(){
+      clear()
     })
   }
 )
