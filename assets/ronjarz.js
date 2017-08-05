@@ -1,4 +1,6 @@
-var notes = ["a","as","b","c","cs","d","ds","e","fs","g","gs"]
+var notes = ["a","as","b","c","cs","d","ds","e","f","fs","g","gs"]
+
+var notesPicked= []
 
 // function test(){
 // 	var rand = Math.floor(Math.random()*11)
@@ -15,9 +17,28 @@ var notes = ["a","as","b","c","cs","d","ds","e","fs","g","gs"]
 
 
 function test(max){
-	var rand = Math.floor(Math.random()*max)
+
+  function randNum(max){
+
+    return Math.floor(Math.random()*max)
+
+
+  }
+
+  var rand = randNum(max)
+    // console.log(rand)
+    // console.log(notesPicked)
+    // console.log($.inArray(rand,notesPicked))
+    // if($.inArray(rand,notesPicked) == -1){console.log("unique")}else{console.log("used")}
+
+  notesPicked.push(rand)
+
 	selNote= notes[rand]
+console.log(rand)
   console.log(selNote)
+  console.log(notes)
+  notes.splice(rand,1)
+  console.log(notes)
 	return "#" + selNote
 //  	return selNote
 // 	if(selNote.match(`[a-z][s]`)){
@@ -29,13 +50,15 @@ function test(max){
 }
 
 function randNote(note){
-	$(".note").css("background-color","white")
+	// $(".note").css("background-color","white")
 	$(""+note).css("background-color","red")
 }
 
 $("document").ready(function(){
+
     $("#randomize").click(function(){
       randNote(test(notes.length))
+      console.log(notesPicked)
     })
   }
 )
