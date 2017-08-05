@@ -1,0 +1,41 @@
+.note{
+  height: 25px;
+  width: 30px;
+  border: 1px dashed black;
+  text-align: center;
+  padding-top:5px;
+  margin:3px;
+  border-radius:100%;
+  display:block;
+  float:left;
+  position:relative
+}
+#empty{
+  border: 1px solid white;
+}
+
+#clock{
+  width:150px;
+  padding:2em;
+  border: 2px solid red;
+  display:block;
+  position:absolute;
+}
+
+.functionbutton{
+  display:inline;
+  margin-top:300px;
+}
+
+.app{
+  display:block;
+  position:absolute;
+  border:1px dashed black;
+  height:200px;
+  width:50%;
+}
+.newscale{
+  display:inline;
+  position:absolute;
+  margin:3px;
+}
