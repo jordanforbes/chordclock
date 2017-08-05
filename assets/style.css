@@ -1,0 +1,11 @@
+.note{
+  height: 25px;
+  width: 30px;
+  border: 1px dashed black;
+  text-align: center;
+  padding-top:5px;
+  margin:3px;
+  border-radius:100%;
+  display:block;
+  float:left;
+}
