@@ -35,16 +35,28 @@ $("document").ready(function(){
     console.log(ranPick)
 
     var scaleLengths= [2,3,4]
+    var scale= scaleLengths[random(3)-1]
 
-    for(i= 0; i<=scaleLengths[random(3)-1]; i++){
+    $(".first").text(ranPick)
+    $(".last").text(function(){
+        if(ranPick + scale>12){
+          return ranPick + scale -12
+        }else{
+          return ranPick + scale
+        }
+      })
+    var noteColor = ["#FFC4C4","#C4FFFB","#C4FFC8"]
+
+    for(i= 0; i<=scale; i++){
       // $("#"+ ranPick ).css("background-color","red")
       var secPick = ranPick +i
       if(secPick > 12){
         var secPick = secPick-12
-        $("#"+ secPick).css("background-color","red")
+          $("#"+ secPick).css("background-color",noteColor[scale-2])
 
         }else{
-        $("#"+ secPick).css("background-color","red")}
+          $("#"+ secPick).css("background-color",noteColor[scale-2])
+        }
       }
   })
 
