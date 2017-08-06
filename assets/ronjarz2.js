@@ -33,10 +33,19 @@ $("document").ready(function(){
     $(".note").css("background-color","white")
     var ranPick= random(12)
     console.log(ranPick)
-    $("#"+ ranPick ).css("background-color","red")
-    var secPick = ranPick +1
-    $("#"+ secPick).css("background-color","red")
 
+    var scaleLengths= [2,3,4]
+
+    for(i= 0; i<=scaleLengths[random(3)-1]; i++){
+      // $("#"+ ranPick ).css("background-color","red")
+      var secPick = ranPick +i
+      if(secPick > 12){
+        var secPick = secPick-12
+        $("#"+ secPick).css("background-color","red")
+
+        }else{
+        $("#"+ secPick).css("background-color","red")}
+      }
   })
 
 })
